@@ -1,231 +1,238 @@
 <!DOCTYPE html>
 <html lang="it-IT">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Silviu Chiriac</title>
-        <meta name="description" content="Noгma è uno studio di progettazione non-grafica a Torino, che esplora la possibilità nichilista di eliminare la scelta estetica dalla trasmissione di informazioni. Noгma fa assolutamente nulla di speciale.">
-        <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://normadesign.it/">
-        <link rel="manifest" href="/site.webmanifest"/>
-        <meta property="og:locale" content="it_IT">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Studio di Graphic Design a Torino | Norma">
-        <meta property="og:description" content="Noгma è uno studio di progettazione non-grafica a Torino, che esplora la possibilità nichilista di eliminare la scelta estetica dalla trasmissione di informazioni. Noгma fa assolutamente nulla di speciale.">
-        <meta property="og:url" content="https://silviu.xyz/">
-        <meta property="og:site_name" content="Silviu Chiriac">
-        <meta property="og:image" content="https://images.prismic.io/normadesign/c22fdd16-2d66-45e8-bcb7-403bb0bf30fc_og_image.jpg?auto=compress,format">
-        <meta name="twitter:card" content="summary">
-        <script src="sketch.js" type="text/javascript"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" type="text/javascript"></script>
-          
-        <!-- Scripts -->
-        <script type="text/javascript" src="b64.js"></script>
-        <script type="text/javascript" src="api.js"></script>
-        <script type="text/javascript" src="index.js"> </script>
 
-        <style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silviu Chiriac</title>
+  <meta name="description"
+    content="TO DO">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://silviu.xyz/">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Silviu Chiriac — Visual Designer">
+  <meta property="og:description"
+    content="TO DO">
+  <meta property="og:url" content="https://silviu.xyz/">
+  <meta property="og:site_name" content="Silviu Chiriac">
+  <meta property="og:image"
+    content="TO DO">
+  <meta name="twitter:card" content="summary">
+  <script src="sketch.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" type="text/javascript"></script>
 
-@font-face {
-  font-family: 'PP Radio';
-  src: url('pp_radio.otf') format('opentype');
-  font-style: normal;
-  font-display: swap;
-}
+  <script type="text/javascript" src="b64.js"></script>
+  <script type="text/javascript" src="api.js"></script>
+  <script type="text/javascript" src="index.js"> </script>
 
-            * {
-              color: white;
-              font-family: sans-serif;
-            }
+  <style>
+    @font-face {
+      font-family: 'PP Radio';
+      src: url('pp_radio.otf') format('opentype');
+      font-style: normal;
+      font-display: swap;
+    }
 
-            canvas {
-              /* border-radius: 24px; */
-            }
-            
-            html {
-                background-color: #131313;
-            }
+    * {
+      color: white;
+      font-family: sans-serif;
+    }
 
-            body {
-                margin: 0 19px;
-                -webkit-font-smoothing: none;
-                font-family: Arial, Helvetica, sans-serif;
-                text-rendering: optimizeSpeed;
-            }
+    canvas {
+      /* border-radius: 24px; */
+    }
 
-            body {
-                font-size: 18px;
-                line-height: 22px;
-                hyphens: auto;
-                -ms-hyphens: auto;
-                -webkit-hyphens: auto;
-            }
+    html {
+      background-color: #131313;
+    }
 
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 0;
-                /* mix-blend-mode: exclusion; */
-                max-width: 800px;
-            }
+    body {
+      margin: 0 19px;
+      -webkit-font-smoothing: none;
+      font-family: Arial, Helvetica, sans-serif;
+      text-rendering: optimizeSpeed;
+    }
 
-            table.head {
-              min-height: 50vh;
-            }
-            
-            table.head p:last-child {
-              margin-bottom: 120px;
-            }
+    body {
+      font-size: 18px;
+      line-height: 22px;
+      hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+    }
 
-            td {
-              width: 30%;
-            }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      /* mix-blend-mode: exclusion; */
+      max-width: 800px;
+    }
 
-            p {
-              margin: 22px 0;
-            }
+    table.head {
+      min-height: 50vh;
+    }
 
-            p:first-of-type {
-              margin-bottom: 60px;
-            }
+    table.head p:last-child {
+      margin-bottom: 120px;
+    }
 
-            p.big {
-              font-family: 'PP Radio';
-              font-size: 60px;
-              line-height: 60px;
-              hyphens: none;
-            }
+    td {
+      width: 30%;
+    }
 
-            li {
-                list-style: none;
-            }
+    p {
+      margin: 22px 0;
+    }
 
-            td {
-              vertical-align: top;
-            }
+    p:first-of-type {
+      margin-bottom: 60px;
+    }
 
-            ul {
-              margin: 22px 0;
-              padding-inline: 0;
-            }
+    p.big {
+      font-family: 'PP Radio';
+      font-size: 60px;
+      line-height: 60px;
+      hyphens: none;
+    }
 
-            svg {
-              fill: white;
-              height: 14px;
-              width: 14px;
-              margin-right: 6px;
-            }
+    li {
+      list-style: none;
+    }
 
-            canvas {
-              position: fixed;
-              top: 0;
-              left: 0;
-              z-index: -1;
-              border: none;
-              cursor: none;
-              pointer-events: none;
-              overflow: hidden;
-            }
+    td {
+      vertical-align: top;
+    }
 
-            a {
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
-  cursor: pointer;
-}
+    ul {
+      margin: 22px 0;
+      padding-inline: 0;
+    }
 
-a:before {
-  content: "";
-  position: absolute;
-  background: white;
-}
+    svg {
+      fill: white;
+      height: 14px;
+      width: 14px;
+      margin-right: 6px;
+    }
 
-a:hover:before {
-  width: 0;
-  left: 0;
-}
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border: none;
+      cursor: none;
+      pointer-events: none;
+      overflow: hidden;
+    }
 
-a:before {
-  height: 1px;
-  width: 100%;
-  right: 0;
-  top: 20px;
-  -webkit-transition: width .2s ease-in;
-  -o-transition: width .2s ease-in;
-  transition: width .2s ease-in;
-}
+    a {
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+    }
 
-#logo:before {
-  content: "Sill";
-}
+    a:before {
+      content: "";
+      position: absolute;
+      background: white;
+    }
 
-#logo:hover:before {
-  content: "Silviu Chiriac";
-}
+    a:hover:before {
+      width: 0;
+      left: 0;
+    }
 
-        </style>
-    </head>
-    <body>
-        <div role="main">
-          <table class="head" title="Titolo">
-              <tbody>
-                  <tr>
-                      <td>
-                          <p id="logo" style="cursor: pointer" onclick="render()">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3c-4.006 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408-.212-3.951-3.473-7.092-7.479-7.092z"/></svg> -->
-                          </p>
-                          <p class="big">
-                            I juggle with forms, type and colors on a daily basis to tell clear messages.
-                          </p>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-          <table class="bottom" title="Titolo">
-            <tbody>
-                <tr>
-                    <td>
-                      <ul>
-                        <li>
-                          Working at <a href="https://www.algo.tv/" target="blank">Algo</a>
-                        </li>
-                        <li>
-                          Turin, Italy
-                        </li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>
-                          <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
-                          title="Scrivi a Norma"><span class="__cf_email__"
-                            data-cfemail="9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></a>            
-                        </li>
-                      </ul>
-                    </td>
-                    <td>
-                        <ul>
-                          <!-- <li>
-                            <a href="#" title="">Index</a>
-                        </li> -->
-                            <li>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
-                              <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing" title="">Resume</a> <small>(140KB)</small>
-                            </li>
-                            <li>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z"/></svg> <a onclick="main()" title="">Portfolio</a> <small>(10MB)</small>
-                            </li>
-                            <li>&nbsp;</li>
-                            <li>
-                              <a href="http://silviu.xyz" title="">Old website</a>
-                            </li>
-                            <li>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-          </table>
-        </div>
-        <script data-cfasync="false" src="mail_decode.js"></script>
-      </body>
+    a:before {
+      height: 1px;
+      width: 100%;
+      right: 0;
+      top: 20px;
+      -webkit-transition: width .2s ease-in;
+      -o-transition: width .2s ease-in;
+      transition: width .2s ease-in;
+    }
+
+    #logo:before {
+      content: "Sill";
+    }
+
+    #logo:hover:before {
+      content: "Silviu Chiriac";
+    }
+  </style>
+</head>
+
+<body>
+  <div role="main">
+    <table class="head" title="Titolo">
+      <tbody>
+        <tr>
+          <td>
+            <p id="logo" style="cursor: pointer" onclick="render()">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3c-4.006 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408-.212-3.951-3.473-7.092-7.479-7.092z"/></svg> -->
+            </p>
+            <p class="big">
+              I juggle with forms, type and colors on a daily basis to tell clear messages.
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="bottom" title="Titolo">
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>
+                Working at <a href="https://www.algo.tv/" target="blank">Algo</a>
+              </li>
+              <li>
+                Turin, Italy
+              </li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>
+                <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
+                  title="Scrivi a Norma"><span class="__cf_email__"
+                    data-cfemail="9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></a>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z" />
+                </svg>
+                <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing"
+                  title="">Resume</a> <small>(140KB)</small>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path
+                    d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z" />
+                </svg> <a onclick="main()" title="">Portfolio</a> <small>(10MB)</small>
+              </li>
+              <li>&nbsp;</li>
+              <li>
+                <a href="http://silviu.xyz" title="">Old website</a>
+              </li>
+              <li>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script data-cfasync="false" src="mail_decode.js"></script>
+</body>
+
 </html>
