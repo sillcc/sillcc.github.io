@@ -38,10 +38,11 @@
     * {
       color: white;
       font-family: sans-serif;
+      -webkit-font-smoothing: auto;
     }
 
     canvas {
-      /* border-radius: 24px; */
+      border-radius: 24px;
     }
 
     html {
@@ -157,12 +158,29 @@
       transition: width .2s ease-in;
     }
 
-    #logo:before {
-      content: "Sill";
+    #logo {
+      width: fit-content;
     }
 
-    #logo:hover:before {
-      content: "Silviu Chiriac";
+    #logo span {
+      display: inline-block;
+      position: absolute;
+      transition: .2s ease-in-out;
+    }
+
+    #logo span:nth-of-type(2) {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+
+    #logo:hover span:nth-of-type(1) {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+
+    #logo:hover span:nth-of-type(2) {
+      opacity: 100;
+      transform: translateY(0px);
     }
   </style>
 </head>
@@ -174,10 +192,12 @@
         <tr>
           <td>
             <p id="logo" style="cursor: pointer" onclick="render()">
+              <span>Silviu Chiriac</span><span>Visual Designer</span>
+              <br />
               <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3c-4.006 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408-.212-3.951-3.473-7.092-7.479-7.092z"/></svg> -->
             </p>
             <p class="big">
-              I juggle with forms, type and colors daily. Visual Design that impress and express. 
+              I juggle with colors, forms & type that convey clear messages and core impressions.
             </p>
           </td>
         </tr>
@@ -199,7 +219,7 @@
               <li>&nbsp;</li>
               <li>
                 <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
-                  title="Scrivi a Norma"><span class="__cf_email__"
+                  title="Scrivi a Silviu"><span class="__cf_email__"
                     data-cfemail="9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></a>
               </li>
             </ul>
