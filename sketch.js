@@ -23,11 +23,7 @@ function setup() {
 	
   // init with random values
   // for (let i=0; i<tileCountX; i++) {
-	for (let i=0; i<2; i++) {
-		hueValues.push(int(random(0, 360)));
-		saturationValues.push(int(random(0, 100)));
-		brightnessValues.push(int(random(0, 100)));
-	}
+	pal();
 }
 
 function draw() {
@@ -60,6 +56,14 @@ function draw() {
 
 function render() {
   save("wallpaper.jpg");
+}
+
+function pal() {
+  for (let i = 0; i < 2; i++) {
+    hueValues[i] = int(random(0, 360));
+    saturationValues[i] = int(random(0, 100));
+    brightnessValues[i] = int(random(0, 100));
+  }
 }
 
 // function keyPressed() {
