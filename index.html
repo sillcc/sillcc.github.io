@@ -22,7 +22,6 @@
   <meta name="twitter:card" content="summary">
   <script src="sketch.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="index.js"> </script>
 
   <style>
     @font-face {
@@ -39,7 +38,7 @@
     }
 
     html {
-      background-color: #131313;
+      background-color: #d3d3d3;
     }
 
     body {
@@ -47,6 +46,36 @@
       -webkit-font-smoothing: none;
       font-family: Arial, Helvetica, sans-serif;
       text-rendering: optimizeSpeed;
+    }
+
+    .fade-in {
+      -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    .delay-1 {
+      animation-delay: 120ms;
+    }
+
+    .delay-2 {
+      animation-delay: 240ms;
+    }
+
+    @-webkit-keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
     body {
@@ -184,12 +213,12 @@
       <tbody>
         <tr>
           <td>
-            <p id="logo" style="cursor: pointer" onclick="pal()">
-              <span>Silviu Chiriac</span><span>New palette</span>
+            <p id="logo" class="fade-in" style="cursor: pointer" onclick="render()">
+              <span>Silviu Chiriac</span><span>Download</span>
               <br />
               <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3c-4.006 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408-.212-3.951-3.473-7.092-7.479-7.092z"/></svg> -->
             </p>
-            <p class="big">
+            <p class="big fade-in delay-1">
               I juggle with colors, forms & type that convey clear messages and evoke core impressions.
             </p>
           </td>
@@ -197,7 +226,7 @@
       </tbody>
     </table>
     <table class="bottom" title="Titolo">
-      <tbody>
+      <tbody class="fade-in delay-2">
         <tr>
           <td>
             <ul>
