@@ -25,10 +25,12 @@
 
   <style>
     @font-face {
-      font-family: 'PP Radio';
-      src: url('pp_radio.otf') format('opentype');
-      font-style: normal;
-      font-display: swap;
+        font-family: 'PPRadio';
+        src: url('PPRadioGrotesk.woff2') format('woff2'),
+            url('PPRadioGrotesk.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
     }
 
     * {
@@ -115,10 +117,11 @@
     }
 
     p.big {
-      font-family: 'PP Radio';
+      font-family: 'PPRadio', serif;
       font-size: 60px;
       line-height: 60px;
       hyphens: none;
+      mix-blend-mode: difference;
     }
 
     li {
