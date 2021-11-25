@@ -35,7 +35,7 @@ class line {
   constructor() {
     this.nsX = random(100);
     this.nsY = random(100);
-    this.color = color(random(360), 20, random(100));
+    this.color = color(random(360), 50, random(100));
     this.sw = random(width/20, width/4);
     this.aryPoints = [];
   }
