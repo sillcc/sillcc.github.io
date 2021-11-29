@@ -18,12 +18,12 @@ function setup() {
   for (let i = 0; i < _objectNum; i++) {
     _aryObject.push(new line());
   }
-  _bgColor = color(0, 0, 12);
+  _bgColor = color(0, 0, 0);
 }
 
 function draw() {
   clear();
-  background(_bgColor);
+  // background(_bgColor);
 
   for (let i = 0; i < _objectNum; i++) {
     _aryObject[i].update();
@@ -35,7 +35,7 @@ class line {
   constructor() {
     this.nsX = random(100);
     this.nsY = random(100);
-    this.color = color(random(360), 50, random(100));
+    this.color = color(random(360), 20, random(100));
     this.sw = random(width/20, width/4);
     this.aryPoints = [];
   }

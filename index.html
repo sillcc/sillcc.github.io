@@ -25,22 +25,23 @@
 
   <style>
     @font-face {
-        font-family: 'PPRadio';
-        src: url('PPRadioGrotesk.woff2') format('woff2'),
-            url('PPRadioGrotesk.woff') format('woff');
+        font-family: 'ppradio';
+        src: url('ppradio.woff2') format('woff2'),
+            url('ppradio.woff') format('woff');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
     }
 
     * {
-      color: white;
+      color: #ffffff;
       font-family: sans-serif;
+      font-smooth: auto;
       -webkit-font-smoothing: auto;
     }
 
     html {
-      background-color: #1e1e1e;
+      background-color: #000000;
     }
 
     body {
@@ -116,11 +117,16 @@
     }
 
     p.big {
-      font-family: 'PPRadio', Arial, sans-serif;
+      font-family: 'ppradio', Arial, sans-serif;
       font-size: 60px;
       line-height: 60px;
       hyphens: none;
       /* mix-blend-mode: difference; */
+    }
+
+    i {
+      font-family: serif;
+      letter-spacing: -2px;
     }
 
     li {
@@ -137,7 +143,7 @@
     }
 
     svg {
-      fill: white;
+      fill: #ffffff;
       height: 14px;
       width: 14px;
       margin-right: 6px;
@@ -164,7 +170,7 @@
     a:before {
       content: "";
       position: absolute;
-      background: white;
+      background: #ffffff;
     }
 
     a:hover:before {
@@ -181,47 +187,20 @@
       -o-transition: width .2s ease-in;
       transition: width .2s ease-in;
     }
-
-    #logo {
-      width: fit-content;
-    }
-
-    #logo span {
-      display: inline-block;
-      position: absolute;
-      transition: .2s ease-in-out;
-    }
-
-    #logo span:nth-of-type(2) {
-      opacity: 0;
-      transform: translateY(6px);
-    }
-
-    #logo:hover span:nth-of-type(1) {
-      opacity: 0;
-      transform: translateY(-6px);
-    }
-
-    #logo:hover span:nth-of-type(2) {
-      opacity: 100;
-      transform: translateY(0px);
-    }
   </style>
 </head>
 
 <body>
   <div role="main">
-    <table class="head" title="Titolo">
+    <table class="head">
       <tbody>
         <tr>
           <td>
-            <p id="logo" class="fade-in" style="cursor: pointer" onclick="render()">
-              <span>Silviu Chiriac</span><span>Save Background</span>
-              <br />
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3c-4.006 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408-.212-3.951-3.473-7.092-7.479-7.092z"/></svg> -->
+            <p class="fade-in" style="cursor: help;">
+              Silviu Chiriac
             </p>
             <p class="big fade-in delay-1">
-              I juggle with colors, forms & type that convey clear messages and evoke strong impressions.
+              I juggle with colors, forms & type that convey clear messages and make strong impressions.
             </p>
           </td>
         </tr>
@@ -233,7 +212,7 @@
           <td>
             <ul>
               <li>
-                Working at <a href="https://www.algo.tv/" target="blank">Algo</a>
+                Jr Visual Designer at <a href="https://www.algo.tv/" target="blank">Algo</a>
               </li>
               <li>
                 Turin, Italy
