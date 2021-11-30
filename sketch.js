@@ -12,7 +12,7 @@ function setup() {
   colorMode(HSB, 360, 100, 100, 255);
   noStroke();
   _objectNum = 6;
-  _nsRate = 0.0001;
+  _nsRate = 0.0002;
   _maxPoint = 100;
 
   for (let i = 0; i < _objectNum; i++) {

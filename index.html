@@ -25,10 +25,17 @@
 
   <style>
     @font-face {
+        font-family: 'ppeditorial';
+        src: url('ppeditorial.woff2') format('woff2'),
+            url('ppeditorial.woff') format('woff');
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
         font-family: 'ppradio';
         src: url('ppradio.woff2') format('woff2'),
             url('ppradio.woff') format('woff');
-        font-weight: normal;
         font-style: normal;
         font-display: swap;
     }
@@ -41,7 +48,7 @@
     }
 
     html {
-      background-color: #000000;
+      background-color: #202124;
     }
 
     body {
@@ -119,14 +126,14 @@
     p.big {
       font-family: 'ppradio', Arial, sans-serif;
       font-size: 60px;
-      line-height: 60px;
+      line-height: 62px;
       hyphens: none;
-      /* mix-blend-mode: difference; */
     }
 
     i {
-      font-family: serif;
+      font-family: 'ppeditorial', Times, serif;
       letter-spacing: -2px;
+      line-height: 0;
     }
 
     li {
@@ -143,7 +150,7 @@
     }
 
     svg {
-      fill: #ffffff;
+      fill: #666666;
       height: 14px;
       width: 14px;
       margin-right: 6px;
@@ -170,7 +177,7 @@
     a:before {
       content: "";
       position: absolute;
-      background: #ffffff;
+      background: #666666;
     }
 
     a:hover:before {
@@ -200,7 +207,7 @@
               Silviu Chiriac
             </p>
             <p class="big fade-in delay-1">
-              I juggle with colors, forms & type that convey clear messages and make strong impressions.
+              I juggle with colors, forms & type that convey <i>clear messages</i> and make <i>strong impressions</i>.
             </p>
           </td>
         </tr>
@@ -212,11 +219,14 @@
           <td>
             <ul>
               <li>
-                Jr Visual Designer at <a href="https://www.algo.tv/" target="blank">Algo</a>
+                Jr Visual Designer
               </li>
               <li>
-                Turin, Italy
+                Working at <a href="https://www.algo.tv/" target="blank">Algo</a>
               </li>
+              <!-- <li>
+                Turin, Italy
+              </li> -->
               <li>&nbsp;</li>
               <li>&nbsp;</li>
               <li>&nbsp;</li>
@@ -229,6 +239,10 @@
           </td>
           <td>
             <ul>
+              <li>
+                Turin, Italy
+              </li>
+              <li>&nbsp;</li>
               <li>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <path
@@ -245,9 +259,7 @@
               </li>
               <li>&nbsp;</li>
               <li>
-                <a href="https://old.silviu.xyz/portfolio" title="">Old & Archived</a>
-              </li>
-              <li>
+                <a href="https://old.silviu.xyz/portfolio" title="">Old Website</a>
               </li>
             </ul>
           </td>
