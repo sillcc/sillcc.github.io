@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Silviu Chiriac / Visual Designer</title>
+  <title>Silviu - Visual Designer</title>
   <meta name="description"
     content="TO DO">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://silviu.xyz/">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Silviu Chiriac / Visual Designer">
+  <meta property="og:title" content="Silviu Chiriac - Visual Designer">
   <meta property="og:description"
     content="TO DO">
   <meta property="og:url" content="https://silviu.xyz/">
@@ -34,9 +34,15 @@
 
     * {
       color: #ffffff;
-      font-family: sans-serif;
       font-smooth: auto;
       -webkit-font-smoothing: auto;
+    }
+
+    *:not(.big) {
+      font-family: sans-serif;      
+      font-size: 18px;
+      line-height: 1.4;
+      letter-spacing: -.01em;
     }
 
      /* Hide scrollbar for Chrome, Safari and Opera */
@@ -53,16 +59,33 @@
     *,:after,:before{box-sizing:border-box}body{margin:0;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}a,button{color:inherit;cursor:pointer}button{background-color:transparent;border-width:0;padding:0}figure{margin:0}input::-moz-focus-inner{border:0;padding:0;margin:0}button,input,select,textarea{font:inherit}dd,dl,menu,ol,ul{margin:0;padding:0;list-style:none}h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit}p{margin:0}fieldset{border-width:0;padding:0;margin:0}blockquote,q{quotes:none;margin:0}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}th{font-weight:inherit}td,th{padding:0}@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
     html {
-      background-color: #141414;
+      background-color: rgba(29, 29, 29);
       width: 100vw;
       height: 100vh;
+      hyphens: none;
     }
 
-    div[role=main] {
+    .wrapper {
       margin: 20px;
-      padding: 20px 30px;
-      background: #303030;
-      border-radius: 10px;
+      padding: calc(20px + 2vmax);
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      width: calc(100vw - 40px);
+      min-height: calc(100vh - 40px);
+      border-radius: calc(20px + 1vmax);
+      position: relative;
+      z-index: +1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    
+    .wrapper > img {
+      object-fit: cover;
+      object-position: left;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      z-index: -1;
     }
 
     body {
@@ -133,16 +156,13 @@
     body {
       font-size: 17px;
       line-height: 22px;
-      hyphens: auto;
-      -ms-hyphens: auto;
-      -webkit-hyphens: auto;
     }
 
     table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0;
-      max-width: 800px;
+      width: 100vw;
+      border-collapse: separate;
+      border-spacing: calc(20px + 2vmax);
+      max-width: 640px;
     }
 
     table.head {
@@ -154,22 +174,16 @@
     }
 
     td {
-      width: 30%;
-    }
-
-    p {
-      margin: 22px 0;
-    }
-
-    p:first-of-type {
-      margin-bottom: 60px;
+      width: 50%;
     }
 
     p.big {
       font-family: 'ppradio', Arial, sans-serif;
-      font-size: 48px;
-      line-height: 50px;
-      hyphens: none;
+      font-size: 80px;
+      line-height: 0.8;
+      max-width: 640px;
+      height: fit-content;;
+      /* mix-blend-mode: difference; */
     }
 
     i {
@@ -187,7 +201,6 @@
     }
 
     ul {
-      margin: 22px 0;
       padding-inline: 0;
     }
 
@@ -199,14 +212,11 @@
     }
 
     canvas {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
-      border: none;
       cursor: none;
       pointer-events: none;
-      overflow: hidden;
     }
 
     a {
@@ -219,7 +229,7 @@
     a:before {
       content: "";
       position: absolute;
-      background: #555555;
+      background-color: #ffffff;
     }
 
     a:hover:before {
@@ -231,86 +241,80 @@
       height: 1px;
       width: 100%;
       right: 0;
-      top: 20px;
+      top: 22px;
       -webkit-transition: width .2s ease-in;
       -o-transition: width .2s ease-in;
       transition: width .2s ease-in;
+    }
+
+    .footer {
+      position: sticky;
+      bottom: 0;
     }
   </style>
 </head>
 
 <body>
-  <div role="main" class="slide-in">
-    <table class="head">
-      <tbody>
-        <tr>
-          <td>
-            <!-- <p class="fade-in" style="cursor: help;">
-              Silviu Chiriac
-            </p> -->
-            <p class="big fade-in delay-1">
-              I juggle with colors, forms & type that convey clear messages and make strong impressions.
-            </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="bottom" title="Titolo">
-      <tbody class="fade-in delay-2">
-        <tr>
-          <td>
-            <ul>
-              <li>
-                Visual Designer
-              </li>
-              <li>
-                Working at <a href="https://www.algo.tv/" target="blank">Algo</a>
-              </li>
-              <!-- <li>
-                Turin, Italy
-              </li> -->
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-              <li>
-                <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
-                  title="Scrivi a Silviu">Mail me</a>
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                Turin, Italy
-              </li>
-              <li>&nbsp;</li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path
-                    d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z" />
-                </svg>
-                <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing"
-                  title="">Resume</a>
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path
-                    d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z" />
-                </svg> <a href="https://drive.google.com/file/d/1PPSVDI9NftTVU8Npb_IeiVYF_5yK0hIj/view?usp=sharing" title="">Portfolio</a>
-              </li>
-              <li>&nbsp;</li>
-              <li>
-                <a href="https://old.silviu.xyz/portfolio" title="">Old Website</a>
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+
+  <div class="wrapper slide-in">
+    <div id="sketch"></div>
+    <p class="big fade-in delay-1">
+      Silviu<br/>Chiriac<br/><span style="color: black;">Visual Designer</span>
+    </p>
+    <!-- <img class="delay-2" src="ph.png"/> -->
   </div>
-  <div>
-    
-  </div>
+
+  <table class="footer" title="Titolo">
+    <tbody class="fade-in delay-2">
+      <tr>
+        <td>
+          <ul>
+            <li>
+              I juggle with shapes, type and colors to tell clear stories and make strong impressions.
+            </li>
+            <li>&nbsp;</li>
+            <li>
+              <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
+                title="Scrivi a Silviu">Contact me</a>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              Turin, Italy
+            </li>
+            <li>&nbsp;</li>
+            <li>
+              <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing"
+                title="">Resume</a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1PPSVDI9NftTVU8Npb_IeiVYF_5yK0hIj/view?usp=sharing" title="">Portfolio</a>
+            </li>
+            <li>&nbsp;</li>
+            <li>
+              © 2021
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <script type="text/javascript">
+    function generateRandomColor() {
+      const hue = Math.floor(Math.random() * 360);
+      const saturation = 60 + "%";
+      const lightness = 80 + "%";
+      return "hsl(" + hue + ", " + saturation + ", " + lightness + ")";
+    };
+    var randomColor = generateRandomColor();
+    console.log(randomColor);
+    document.querySelector('.wrapper').style.backgroundColor = randomColor;
+  </script> -->
+
   <script data-cfasync="false" src="decode.js"></script>
 </body>
 

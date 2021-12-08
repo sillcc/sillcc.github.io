@@ -7,18 +7,21 @@ let _objectNum;
 let _bgColor;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+
+  var myCanvas = createCanvas(2*windowWidth, 2*windowHeight);
+  myCanvas.parent("sketch");
+
   frameRate(60);
   colorMode(HSB, 360, 100, 100, 255);
   noStroke();
   _objectNum = 6;
-  _nsRate = 0.0002;
+  _nsRate = 0.0001;
   _maxPoint = 100;
 
   for (let i = 0; i < _objectNum; i++) {
     _aryObject.push(new line());
   }
-  _bgColor = color(0, 0, 0);
+  _bgColor = color(random(360), 60, 80);
 }
 
 function draw() {
@@ -55,7 +58,7 @@ class line {
     push();
     translate(width/2, height/2);
     let ang = atan2(
-                    this.aryPoints[0][1] - this.aryPoints[this.aryPoints.length-1][1], 
+                    this.aryPoints[0][1] - this.aryPoints[this.aryPoints.length-1][1],
                     this.aryPoints[0][0] - this.aryPoints[this.aryPoints.length-1][0]
                     );
     beginShape();
@@ -72,9 +75,9 @@ class line {
   }
 }
 
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-// }
+function windowResized() {
+  // resizeCanvas(windowWidth, windowHeight);
+}
 
 function render() {
   save("wallpaper.jpg");
