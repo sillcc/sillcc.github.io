@@ -9,7 +9,6 @@ let _bgColor;
 function setup() {
 
   var myCanvas = createCanvas(2*windowWidth, 2*windowHeight);
-  myCanvas.parent("sketch");
 
   frameRate(60);
   colorMode(HSB, 360, 100, 100, 255);
