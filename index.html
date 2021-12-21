@@ -20,26 +20,28 @@
   <meta property="og:image"
     content="TO DO">
   <meta name="twitter:card" content="summary">
+  <!-- <script src="p5.min.js"></script>
+  <script src="sketch.js"></script>  -->
 
   <style>
     @font-face {
-        font-family: 'generalsans';
-        src: url('generalsans.woff2') format('woff2'),
-            url('generalsans.woff') format('woff');
+        font-family: 'cabinet';
+        src: url('cabinet.woff2') format('woff2'),
+            url('cabinet.woff') format('woff');
         font-style: normal;
         font-display: swap;
     }
-
+    
     * {
-      color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       font-smooth: auto;
       -webkit-font-smoothing: auto;
     }
 
     *:not(.big) {
-      font-family: 'generalsans', sans-serif;      
-      font-size: 24px;
-      line-height: 1.175;
+      font-family: 'cabinet', sans-serif;      
+      font-size: 20px;
+      line-height: 1;
       /* letter-spacing: -.01em; */
     }
 
@@ -57,7 +59,7 @@
     *,:after,:before{box-sizing:border-box}body{margin:0;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}a,button{color:inherit;cursor:pointer}button{background-color:transparent;border-width:0;padding:0}figure{margin:0}input::-moz-focus-inner{border:0;padding:0;margin:0}button,input,select,textarea{font:inherit}dd,dl,menu,ol,ul{margin:0;padding:0;list-style:none}h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit}p{margin:0}fieldset{border-width:0;padding:0;margin:0}blockquote,q{quotes:none;margin:0}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}th{font-weight:inherit}td,th{padding:0}@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
     html {
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(16, 16, 16);
       width: 100vw;
       height: 100vh;
       hyphens: none;
@@ -127,29 +129,23 @@
         opacity: 1;
       }
     }
-
-    body {
-      font-size: 17px;
-      line-height: 22px;
-    }
-
+    
     table {
       width: 100vw;
       border-collapse: separate;
-      border-spacing: 30px;
-      max-width: 640px;
+      border-spacing: 1vw;
+      /* max-width: 640px; */
     }
 
     table.head {
       min-height: 50vh;
     }
 
-    td {
-      width: 50%;
+    td:first-of-type {
+      width: 240px;
     }
 
     i {
-      font-family: 'ppeditorial', Times, serif;
       letter-spacing: -2px;
       line-height: 0;
     }
@@ -186,13 +182,13 @@
       text-decoration: none;
       position: relative;
       cursor: pointer;
-      margin-bottom: 4px;
+      margin-bottom: 0.5vw;
     }
-
+    
     a:before {
       content: "";
       position: absolute;
-      background-color: rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
     }
 
     a:hover:before {
@@ -201,10 +197,10 @@
     }
 
     a:before {
-      height: 3px;
-      width: 98%;
+      height: 1px;
+      width: 100%;
       right: 0;
-      top: 26px;
+      top: 20px;
       -webkit-transition: width .2s ease-in;
       -o-transition: width .2s ease-in;
       transition: width .2s ease-in;
@@ -238,7 +234,7 @@
             </li>
           </ul>
         </td>
-        <td style="padding-left: 20px;">
+        <td style="padding-left: 2vw;">
           <ul>
             <li>
               Turin, Italy
