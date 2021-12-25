@@ -40,8 +40,8 @@
 
     *:not(.big) {
       font-family: 'cabinet', sans-serif;      
-      font-size: 20px;
-      line-height: 1;
+      font-size: 18px;
+      line-height: 1.1;
       /* letter-spacing: -.01em; */
     }
 
@@ -141,10 +141,6 @@
       min-height: 50vh;
     }
 
-    td:first-of-type {
-      width: 240px;
-    }
-
     i {
       letter-spacing: -2px;
       line-height: 0;
@@ -200,7 +196,7 @@
       height: 1px;
       width: 100%;
       right: 0;
-      top: 20px;
+      top: 18px;
       -webkit-transition: width .2s ease-in;
       -o-transition: width .2s ease-in;
       transition: width .2s ease-in;
@@ -210,16 +206,41 @@
       position: sticky;
       bottom: 0;
     }
+
+    .project > * {
+      float: left;
+    }
+
+    .dida {
+      width: 20%;
+      min-width: 180px;
+      margin-bottom: 4vw;
+    }
+
+    .slider {
+      width: 100%;
+      background-color: red;
+      border-radius: 16px;
+      padding-top: 56.25%;
+      margin-bottom: 2vw;
+    }
+
+    h1 {
+      height: calc(100vh - 1vw);
+      font-size: 20vw !important;
+      letter-spacing: -1vw !important;
+      padding-top: 50vh;
+    }
   </style>
 </head>
 
 <body>
 
-  <table>
+  <table style="width: 240px;">
     <tbody class="fade-in delay-2">
       <tr>
         <td>
-          <ul>
+          <ul style="position: sticky; top: 1vw;">
             <li>
               Silviu Chiriac
             </li>
@@ -232,14 +253,6 @@
               <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
                 title="Scrivi a Silviu">Mail</a>
             </li>
-          </ul>
-        </td>
-        <td style="padding-left: 2vw;">
-          <ul>
-            <li>
-              Turin, Italy
-            </li>
-            <li>&nbsp;</li>
             <li>
               <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing"
                 title="">Resume</a>
