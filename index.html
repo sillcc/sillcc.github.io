@@ -1,276 +1,165 @@
 <!DOCTYPE html>
 <html lang="it-IT">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silviu Chiriac - Visual Designer</title>
+    <meta name="description"
+      content="TO DO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://silviu.xyz/">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Silviu Chiriac - Visual Designer">
+    <meta property="og:description"
+      content="TO DO">
+    <meta property="og:url" content="https://silviu.xyz/">
+    <meta property="og:site_name" content="Silviu Chiriac">
+    <meta property="og:image"
+      content="TO DO">
+    <meta name="twitter:card" content="summary">
+    <!-- <script src="p5.min.js"></script>
+    <script src="sketch.js"></script>  -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Silviu Chiriac - Visual Designer</title>
-  <meta name="description"
-    content="TO DO">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://silviu.xyz/">
-  <meta property="og:locale" content="it_IT">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Silviu Chiriac - Visual Designer">
-  <meta property="og:description"
-    content="TO DO">
-  <meta property="og:url" content="https://silviu.xyz/">
-  <meta property="og:site_name" content="Silviu Chiriac">
-  <meta property="og:image"
-    content="TO DO">
-  <meta name="twitter:card" content="summary">
-  <!-- <script src="p5.min.js"></script>
-  <script src="sketch.js"></script>  -->
-
-  <style>
-    @font-face {
-        font-family: 'cabinet';
-        src: url('cabinet.woff2') format('woff2'),
-            url('cabinet.woff') format('woff');
-        font-style: normal;
-        font-display: swap;
-    }
-    
-    * {
-      color: rgb(255, 255, 255);
-      font-smooth: auto;
-      -webkit-font-smoothing: auto;
-    }
-
-    *:not(.big) {
-      font-family: 'cabinet', sans-serif;      
-      font-size: 18px;
-      line-height: 1.1;
-      /* letter-spacing: -.01em; */
-    }
-
-     /* Hide scrollbar for Chrome, Safari and Opera */
-    *::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    * {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    } 
-
-    *,:after,:before{box-sizing:border-box}body{margin:0;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}a,button{color:inherit;cursor:pointer}button{background-color:transparent;border-width:0;padding:0}figure{margin:0}input::-moz-focus-inner{border:0;padding:0;margin:0}button,input,select,textarea{font:inherit}dd,dl,menu,ol,ul{margin:0;padding:0;list-style:none}h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit}p{margin:0}fieldset{border-width:0;padding:0;margin:0}blockquote,q{quotes:none;margin:0}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}th{font-weight:inherit}td,th{padding:0}@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-
-    html {
-      background-color: rgb(16, 16, 16);
-      width: 100vw;
-      height: 100vh;
-      hyphens: none;
-    }  
-
-    body {
-      -webkit-font-smoothing: none;
-      font-family: Arial, Helvetica, sans-serif;
-      text-rendering: optimizeSpeed;
-      position: absolute;
-      max-width: 540px;
-      min-height: 540px;
-    }
-
-    .slide-in {
-      -webkit-animation: slide-in 360ms both;
-              animation: slide-in 360ms both;
-    }
-
-    .fade-in {
-      -webkit-animation: fade-in 720ms both;
-              animation: fade-in 720ms both;
-    }
-
-    .delay-1 {
-      animation-delay: 90ms;
-    }
-
-    .delay-2 {
-      animation-delay: 180ms;
-    }
-
-    @-webkit-keyframes slide-in {
-      0% {
-        transform: translateY(-24px);
+    <style>
+      @font-face {
+          font-family: 'cabinet';
+          src: url('cabinet.woff2') format('woff2'),
+              url('cabinet.woff') format('woff');
+          font-style: normal;
+          font-display: swap;
       }
-      100% {
-        transform: translateY(0px);
+      
+      *,:after,:before{box-sizing:border-box}body{margin:0;min-height:100vh;min-width:100vw;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}a,button{color:inherit;cursor:pointer}button{background-color:transparent;border-width:0;padding:0}figure{margin:0}input::-moz-focus-inner{border:0;padding:0;margin:0}button,input,select,textarea{font:inherit}dd,dl,menu,ol,ul{margin:0;padding:0;list-style:none}h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit}p{margin:0}fieldset{border-width:0;padding:0;margin:0}blockquote,q{quotes:none;margin:0}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}th{font-weight:inherit}td,th{padding:0}@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+      * {
+        color: rgb(255, 255, 255);
+        font-family: 'cabinet', sans-serif;      
+        font-size: 18px;
+        line-height: 1.1;
+        hyphens: none;
+        text-rendering: optimizeSpeed;
+        font-smooth: auto;
+        -webkit-font-smoothing: auto;
       }
-    }
-    @keyframes slide-in {
-      0% {
-        transform: translateY(-24px);
+
+      html {
+        background-color: rgb(16, 16, 16);
+        position: fixed;
       }
-      100% {
-        transform: translateY(0px);
+
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: none;
+        pointer-events: none;
+        z-index: -1;
       }
-    }
-
-    @-webkit-keyframes fade-in {
-      0% {
-        transform: translateY(-8px);
-        opacity: 0;
+      
+      a {
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 6px;
       }
-      100% {
-        transform: translateY(0px);
-        opacity: 1;
+      
+      a:before {
+        content: "";
+        position: absolute;
+        background-color: rgb(255, 255, 255);
       }
-    }
-    @keyframes fade-in {
-      0% {
-        transform: translateY(-8px);
-        opacity: 0;
+
+      a:hover:before {
+        width: 0;
+        left: 0;
       }
-      100% {
-        transform: translateY(0px);
-        opacity: 1;
+
+      a:before {
+        height: 1px;
+        width: 100%;
+        right: 0;
+        top: 20px;
+        -webkit-transition: width .2s ease-in;
+        -o-transition: width .2s ease-in;
+        transition: width .2s ease-in;
       }
-    }
-    
-    table {
-      width: 100vw;
-      border-collapse: separate;
-      border-spacing: 1vw;
-      /* max-width: 640px; */
-    }
 
-    table.head {
-      min-height: 50vh;
-    }
+      .fade-in {
+        -webkit-animation: fade-in 720ms both;
+                animation: fade-in 720ms both;
+      }
 
-    i {
-      letter-spacing: -2px;
-      line-height: 0;
-    }
+      .delay-1 {
+        animation-delay: 60ms;
+      }
 
-    li {
-      list-style: none;
-    }
+      .delay-2 {
+        animation-delay: 120ms;
+      }
 
-    td {
-      vertical-align: top;
-    }
+      .delay-3 {
+        animation-delay: 180ms;
+      }
 
-    ul {
-      padding-inline: 0;
-    }
+      .delay-4 {
+        animation-delay: 240ms;
+      }
 
-    svg {
-      fill: #555555;
-      height: 14px;
-      width: 14px;
-      margin-right: 6px;
-    }
+      .delay-5 {
+        animation-delay: 300ms;
+      }
 
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      cursor: none;
-      pointer-events: none;
-    }
-
-    a {
-      display: inline-block;
-      text-decoration: none;
-      position: relative;
-      cursor: pointer;
-      margin-bottom: 0.5vw;
-    }
-    
-    a:before {
-      content: "";
-      position: absolute;
-      background-color: rgb(255, 255, 255);
-    }
-
-    a:hover:before {
-      width: 0;
-      left: 0;
-    }
-
-    a:before {
-      height: 1px;
-      width: 100%;
-      right: 0;
-      top: 18px;
-      -webkit-transition: width .2s ease-in;
-      -o-transition: width .2s ease-in;
-      transition: width .2s ease-in;
-    }
-
-    table {
-      position: sticky;
-      bottom: 0;
-    }
-
-    .project > * {
-      float: left;
-    }
-
-    .dida {
-      width: 20%;
-      min-width: 180px;
-      margin-bottom: 4vw;
-    }
-
-    .slider {
-      width: 100%;
-      background-color: red;
-      border-radius: 16px;
-      padding-top: 56.25%;
-      margin-bottom: 2vw;
-    }
-
-    h1 {
-      height: calc(100vh - 1vw);
-      font-size: 20vw !important;
-      letter-spacing: -1vw !important;
-      padding-top: 50vh;
-    }
-  </style>
-</head>
-
-<body>
-
-  <table style="width: 240px;">
-    <tbody class="fade-in delay-2">
-      <tr>
-        <td>
-          <ul style="position: sticky; top: 1vw;">
-            <li>
-              Silviu Chiriac
-            </li>
-            <li>&nbsp;</li>
-            <li>
-              I juggle with shapes, type and colors to tell clear stories and make strong impressions.
-            </li>
-            <li>&nbsp;</li>
-            <li>
-              <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
-                title="Scrivi a Silviu">Mail</a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing"
-                title="">Resume</a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/file/d/1PPSVDI9NftTVU8Npb_IeiVYF_5yK0hIj/view?usp=sharing" title="">Portfolio</a>
-            </li>
-            <li>&nbsp;</li>
-            <li>
-              © 2021
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <script data-cfasync="false" src="decode.js"></script>
-</body>
-
+      @-webkit-keyframes fade-in {
+        0% {
+          transform: translateY(-12px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in {
+        0% {
+          transform: translateY(-12px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul style="width: 200px; margin: 14px 12px;">
+      <li class="fade-in">
+        Silviu Chiriac
+      </li>
+      <li>&nbsp;</li>
+      <li class="fade-in delay-1">
+        I juggle with shapes, type and colors to tell clear stories and make strong impressions.
+      </li>
+      <li>&nbsp;</li>
+      <li class="fade-in delay-2">
+        <a href="/cdn-cgi/l/email-protection#9ceff5f0fff4f5eef5fdffdcfbf1fdf5f0b2fff3f1"
+          title="Scrivi a Silviu">Mail</a>
+      </li>
+      <li class="fade-in delay-3">
+        <a href="https://drive.google.com/file/d/1zzZG6qyYWmFbPnppN4F8imvAEsrDActB/view?usp=sharing"
+          title="">Resume</a>
+      </li>
+      <li class="fade-in delay-4">
+        <a href="https://drive.google.com/file/d/1PPSVDI9NftTVU8Npb_IeiVYF_5yK0hIj/view?usp=sharing" title="">Portfolio</a>
+      </li>
+      <li>&nbsp;</li>
+      <li class="fade-in delay-5">
+        © 2021
+      </li>
+    </ul>
+    <script data-cfasync="false" src="decode.js"></script>
+  </body>
 </html>
